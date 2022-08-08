@@ -1,0 +1,65 @@
+{% extends 'layout.html'%}
+{% block title %}{{ title }}{% endblock%}
+
+{% block content%}
+<h2><center>Our Dedicated Team</center></h2>
+<br><br>
+<main class="container">
+<div class="container row">
+<div class="card col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+    <img class="card-img-top" src="/static/images/founder.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Founder</p>
+      <p>john@example.com</p>
+      <a href="#" class="btn btn-success">Contact</a>
+    </div>
+  </div>
+  <br><br>
+<div class="card col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+    <img class="card-img-top" src="/static/images/sales_manager.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">Jane Ostin</h4>
+      <p class="card-text">Account Manager</p>
+      <p>jane@example.com</p>
+      <a href="#" class="btn btn-success">Contact</a>
+    </div>
+  </div>
+  <br>
+<div class="card col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+    <img class="card-img-top" src="/static/images/it_manager.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">Mike Ross</h4>
+      <p class="card-text"> Project Manager</p>
+      <p>mike@example.com</p>
+      <a href="#" class="btn btn-success">Contact</a>
+    </div>
+  </div>
+
+<div class="card col-12 col-sm-6 col-md-4 col-lg-3 mx-auto">
+    <img class="card-img-top" src="/static/images/finance_manager.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">Jennifer Styles</h4>
+      <p class="card-text">Head of Sales</p>
+      <p>jennifer@example.com</p>
+      <a href="#" class="btn btn-success">Contact</a>
+    </div>
+  </div>
+</div>
+</main>
+<br>
+<div class="section-body">
+<div class="section">
+    <div class="text">
+        <h2>About Us</h2>
+        <p>
+            We are a Kyiv-based investment and real estate management company with expertise in the Ukrainian property market. By using our services, you can real confidently buy, sell and rent real estate across Ukraine with informed advice and comprehensive support only a phone call away.
+            <p><a href="{{ url_for('contact') }}" class="btn btn-outline-success btn-sm">Contact Us</a> </p>
+        </div>
+        <img src="/static/images/team.jpg" alt="team">
+    </p>
+</div>
+</div>
+
+{% endblock %}
+	 

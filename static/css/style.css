@@ -1,0 +1,61 @@
+h1{
+    color:darkgreen;
+    font-size: 46px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+body{
+    background: #f4f4f4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+
+  .navbar-nav{
+    text-align: right;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .navbar .navbar-nav .nav-link{
+    padding-right: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  footer{
+    padding: 3px;
+    text-align: center;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .card{
+    margin-bottom: 10px;
+}
+.section-body{
+  margin: 5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.section{
+  background-color: rgb(150, 173, 154);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  width: 100%;
+  margin: 10rem auto 0 auto;
+}
+.section img{
+  height: 300px;
+}
+.section h2{
+  color: white;
+}
+.section p{
+  color: #f4f4f4;
+  margin-right: 15px;
+}

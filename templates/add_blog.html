@@ -1,0 +1,64 @@
+{% extends 'layout.html'%}
+{% block title %}Add Project{% endblock%}
+
+{% block content%}
+
+<div class= "container">
+
+
+{% for message in get_flashed_messages() %}
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert"
+    aria-label="Close"></button>
+</div>
+
+{% endfor %}
+
+		<h2><center>Add Project </center></h2>
+		<br/>
+<div class="shadow p-3 mb-5 bg-body rounded">
+
+        <form method="POST">
+        {{ form.hidden_tag() }}
+
+        {{ form.title.label(
+        class="form-label") }}
+
+        {{ form.title(
+        class="form-control") }}
+        <br>
+
+        {{ form.author.label(
+        class="form-label") }}
+            
+        {{ form.author(
+        class="form-control") }}
+        <br>
+
+        {{ form.content.label(
+        class="form-label") }}
+    
+        {{ form.content(
+        class="form-control", rows="10") }}
+            
+        <br>
+
+        {{ form.submit(class="btn btn-success") }}
+        </form>
+        {{ ckeditor.load() }}
+        {{ ckeditor.config(name='content') }}
+</div>
+     <br><br><br>
+    <table class="table table-striped table-hover table-bordered">
+{% for our_user in our_users %}
+    <tr><td>{{ our_user.id }}. <a href="{{ url_for('update', id = our_user.id)}}">
+        {{ our_user.name }}</a>- {{ our_user.email}}  = <a href="{{ url_for('delete', id = our_user.id)}}">Delete</a></td></tr>
+           
+{% endfor %}
+</table>       
+
+</div>	  
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'layout.html'%}
+{% block title %} Home {% endblock%}
+
+{% block content%}
+		
+<div id="carousel-slides" class="carousel slide carousel-fade container" data-bs-ride="carousel">
+	<div class="carousel-inner">
+	  <div class="carousel-item active">
+		<img src="/static/images/slide1.jpg" class="d-block w-100" alt="Slide 1">
+		<div class="carousel-caption d-none d-md-block">
+			<h5>Make your investment dream realty!</h5>
+			<p><a href="{{ url_for('about') }}" class="btn btn-outline-success btn-sm">About Us</a> </p>
+		  </div>
+	  </div>
+	  <div class="carousel-item">
+		<img src="/static/images/slide2.jpg" class="d-block w-100" alt="Slide 2">
+		<div class="carousel-caption d-none d-md-block">
+			<h5>Interested in creating your own property portfolio?</h5>
+			<p><a href="{{ url_for('contact') }}" class="btn btn-outline-success btn-sm">Contact Us</a> </p>
+		  </div>
+	  </div>
+	  <div class="carousel-item">
+		<img src="/static/images/slide3.jpg" class="d-block w-100" alt="Slide 3">
+		<div class="carousel-caption d-none d-md-block">
+			<h5>Make your investment dream realty!</h5>
+			<p><a href="{{ url_for('subscribe') }}" class="btn btn-outline-success btn-sm">Subscribe</a> </p>
+		  </div>
+	  </div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Next</span>
+	</button>
+  </div>
+
+{% endblock %}

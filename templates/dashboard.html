@@ -1,0 +1,45 @@
+{% extends 'layout.html'%}
+{% block title %}Dashboard{% endblock%}
+
+{% block content%}
+
+<div class= "container">
+
+
+{% for message in get_flashed_messages() %}
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert"
+    aria-label="Close"></button>
+</div>
+
+{% endfor %}
+
+<h2><center>Dashboard</center></h2>
+<br><br><br>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="static/images/user2.png" class="img-fluid rounded-start" alt="user2">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ current_user.name }}</h5>
+                  <p class="card-text">
+                    <strong>Username:</strong>{{ current_user.username }}<br>
+                    <strong>User Id:</strong>{{ current_user.id }}<br>
+                    <strong>Email:</strong>{{ current_user.email }}<br>
+                    <strong>Date created: </strong>{{ current_user.date_added }}<br>
+                  </p>
+                  <a href="{{url_for('logout')}}" class="btn btn-success btn-sm">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+   
+
+</div>	  
+
+{% endblock %}
